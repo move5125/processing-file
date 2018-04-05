@@ -24,7 +24,7 @@ korea on top
 -------------
 media
 =========
- point
+○point
 ---------
 
 * * *
