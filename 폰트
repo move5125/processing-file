@@ -1,0 +1,41 @@
+PFont font;
+
+String s = "I like it!" ;
+
+void setup() {
+ fullScreen();
+ textSize(50);
+ 
+ font = loadFont("SegoeScript-48");
+ textFont(font);
+}
+
+void draw() {
+ background(random(100),random(100),random(100)); 
+
+ fill(mouseX,mouseY,100);
+  
+}
+
+
+
+
+
+
+PFont font;
+
+String s = "산모퉁이";
+
+void setup() {
+  size(600, 200);
+  
+  font = loadFont("SansSerif-48.vlw");
+  textFont(font);
+}
+
+void draw() {
+  background(255);
+  fill(0);
+  textSize(48);
+  text(s, 20, 100);
+}
