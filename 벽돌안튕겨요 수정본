@@ -1,0 +1,58 @@
+int x;
+int y;
+int a;
+int b;
+int speed1 = 5;
+int speed2 = 5;
+
+
+void setup() {
+  size(600,400);
+  x = width/2;
+  y = height-10;
+  textSize(70);
+}
+
+void draw() {
+ background(0,150,25); 
+ text("I like it",height/2,width/2);
+ fill(0,50,0);
+ rectMode(CENTER);
+ rect(x, y, 70, 10);
+  
+ fill(a,b,0);
+   ellipse(a,b, 20, 20);
+   b = b + speed2;
+   if(b > height) {
+     speed2 = speed2*-1;
+   }
+   if(b < 0) {
+     speed2 = speed2*-1;
+   }
+
+   a = a + speed1;
+   if(a > width) {
+     speed1 = speed1*-1;
+   }
+   if(a < 0) {
+     speed1 = speed1*-1;
+   }
+}
+
+void keyPressed() {
+ if(keyCode == LEFT) { 
+ x = x - 10;
+ }
+ if(keyCode == RIGHT) {
+ x = x + 10;
+}
+ //if(keyCode == UP) {
+ //y = y - 10;
+// }
+ //if(keyCode == DOWN) {
+// y = y  + 10;
+// }
+
+println(x);
+println(y);
+}
