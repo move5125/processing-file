@@ -1,0 +1,27 @@
+int x = 200;
+int y = 200;
+
+PFont font;
+
+String s = "x값은? = " + x;
+
+void setup(){
+ size(600,400);
+ 
+ font = loadFont("Gulim-48.vlw");
+  textFont(font);
+}
+
+void draw() {
+ background(random(255),90,random(255),30);
+ strokeWeight(10);
+ stroke(30,90,50);
+ fill(90,20,160,95);
+ ellipse(x,y,200,200);
+ x = x + 1;
+ println("x값은? = " + x);
+ fill(20,160,90);
+ text("x값은? = " + x,width/3,height/2);
+ textSize(30);
+ 
+}
