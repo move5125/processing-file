@@ -10,6 +10,6 @@ void draw() {
   textFont(f, 36);
   fill(mouseY,mouseX,random(255));
   textAlign(CENTER);
-  text("정의란 무엇인가?",400,300);
+  text("정의란 무엇인가?",random(height),random(width));
   
 }
