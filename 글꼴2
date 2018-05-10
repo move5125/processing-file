@@ -1,0 +1,15 @@
+PFont f;
+
+void setup() {
+size(800,600);
+f = createFont("Gulim", 16);
+}
+
+void draw() {
+  background(random(200,255),0,0,20);
+  textFont(f, 36);
+  fill(mouseY,mouseX,random(255));
+  textAlign(CENTER);
+  text("정의란 무엇인가?",400,300);
+  
+}
