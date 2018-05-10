@@ -1,0 +1,32 @@
+PFont f;
+float angle = 0;
+int x = 25;
+
+
+
+void setup() {
+size(800,600);
+f = createFont("Gulim", 16);
+}
+
+void draw() {
+  background(random(200,255),0,0,20);
+  textFont(f, x);
+  fill(mouseY,mouseX,random(255));
+  textAlign(CENTER);
+  translate(width/2,height/2);
+  rotate(angle);
+  text("정의란 무엇인가?",random(height),random(width));
+  angle += 0.005;
+  x = x + 2 ; 
+  
+  if(x > 80) {
+    x = x - 2;
+    
+  }
+   if(x < 5) {
+    x = x + 2;
+    
+  }
+  
+}
