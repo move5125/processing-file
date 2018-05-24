@@ -1,0 +1,15 @@
+int answer = sum(5, 10, 32);
+
+int sum(int a, int b, int c) {
+ int total = a + b + c;
+  return total;
+  
+  
+  
+}
+
+void setup() {
+  
+  println(answer);
+  
+}
