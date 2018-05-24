@@ -1,0 +1,35 @@
+
+
+int x = 100;
+int y = 100;
+int thesize = 64;
+int offset = thesize/4;
+
+void setup(){
+size(400,400);
+background(255);
+}
+
+void draw(){
+  
+  
+  drawCar(200,250,100,color(random(10-50),random(30-110),random(20-55)),50);
+  drawCar(100,100,100,color(random(10-50),random(30-110),random(20-55)),30);
+  
+  
+}
+
+void drawCar(int x,int y, int thesize, color c, int offset) {
+
+rectMode(CENTER);
+stroke(0);
+fill(175);
+rect(x,y,thesize,thesize/2);
+
+//fill(random(10-50),random(30-110),random(20-55));
+fill(c);
+rect(x - offset, y - offset, offset, offset/2);
+rect(x - offset, y + offset, offset, offset/2);
+rect(x + offset, y - offset, offset, offset/2);
+rect(x + offset, y + offset, offset, offset/2);
+}
