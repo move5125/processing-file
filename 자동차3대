@@ -1,0 +1,59 @@
+Car myCar1;
+Car myCar2;
+Car myCar3;
+
+void setup(){
+  size(600,400);
+  myCar1 = new Car(color(255,0,0),100,100,3);
+  myCar2 = new Car(color(0,255,0),100,200,6);
+  myCar3 = new Car(color(0,0,255),100,300,9);
+  
+}
+
+void draw(){
+ background(0);
+ myCar1.display(50,30);
+ myCar1.drive();
+ myCar2.display(70,20);
+ myCar2.drive();
+ myCar3.display(40,65);
+ myCar3.drive();
+  
+}
+
+
+
+
+//new tap
+
+
+class Car{ //class name
+  color c; // data
+  int xpos; //data
+  int ypos; //data
+  int xspeed; //data
+  
+
+  Car(color tempC, int tempXpos, int tempYpos, int tempXspeed) {
+   c = tempC; //producter
+   xpos= tempXpos; //producter
+   ypos= tempYpos; //producter
+   xspeed= tempXspeed; //producter
+   
+  }
+
+ 
+  void display(int x, int y){
+   rectMode(CENTER); //function
+   fill(c); //function
+   rect(xpos, ypos, x, y); //function
+  }
+
+  void drive(){
+    xpos = xpos + xspeed;
+    if (xpos > width){
+    xpos = 0;
+  }
+ }
+}
+
